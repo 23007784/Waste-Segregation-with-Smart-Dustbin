@@ -1,58 +1,107 @@
-## Title of the Project
-Small description about the project like one below
-The integration of a chatbot within a hostel booking system, aimed at streamlining the reservation process for students and improving the overall user experience.
+## Waste Segregation with Smart Dustbin
+This project integrates IoT and sensor-based detection mechanisms to simulate a waste segregation system using an LCD display. Instead of an actual dustbin with physical compartments, the system uses sensors to detect the type of waste and displays the corresponding category (metal, wet, dry) on an LCD screen. This approach demonstrates the waste classification logic and automation workflow in a simplified, hardware-friendly manner.
 
 ## About
-<!--Detailed Description about the project-->
-Tailored Chatbot for Hostel Booking System is a project designed to integrate a chatbot that leverages advanced natural language processing techniques to understand and respond to user queries to the hostel booking system. Traditional hostel booking processes are often time-consuming and involve manual searches and extensive communication with hostel staff. This project seeks to overcome these challenges by creating an easy-to-use chatbot interface that assists students in addressing inquiries.
+IoT-Based Waste Segregation with LCD Simulation is a prototype designed to classify waste using sensors such as metal sensors, moisture sensors, and ultrasonic sensors. In traditional automation projects, waste segregation requires a physical bin with multiple compartments and servo-driven lid movements. However, this project replaces the physical dustbin with a 16×2 LCD display that simulates the segregation results.
+
+When a waste object is introduced near the system, the sensors detect its properties. Then, instead of physically segregating the waste, the system shows the detected waste type—Metal / Wet / Dry—on the LCD. An Arduino Nano sends this data to the cloud for monitoring.
+
+This simulation approach is ideal for academic demonstrations and prototype-level validations, reducing hardware complexity while maintaining accurate waste classification logic.
 
 ## Features
-<!--List the features of the project as shown below-->
-- Implements advance neural network method.
-- A framework based application for deployment purpose.
-- High scalability.
-- Less time complexity.
-- A specific scope of Chatbot response model, using json data format.
+- Uses sensors for waste type detection (metal, moisture, ultrasonic).
+
+- Segregation is simulated using a 16×2 LCD display instead of a physical dustbin.
+
+- IoT framework for cloud monitoring (Firebase/MQTT/ThingSpeak).
+
+- High scalability and easy deployment.
+
+- Low time complexity with real-time detection.
+
+- Simple, safe, and cost-effective prototype suitable for students.
 
 ## Requirements
-<!--List the requirements of the project as shown below-->
-* Operating System: Requires a 64-bit OS (Windows 10 or Ubuntu) for compatibility with deep learning frameworks.
-* Development Environment: Python 3.6 or later is necessary for coding the sign language detection system.
-* Deep Learning Frameworks: TensorFlow for model training, MediaPipe for hand gesture recognition.
-* Image Processing Libraries: OpenCV is essential for efficient image processing and real-time hand gesture recognition.
-* Version Control: Implementation of Git for collaborative development and effective code management.
-* IDE: Use of VSCode as the Integrated Development Environment for coding, debugging, and version control integration.
-* Additional Dependencies: Includes scikit-learn, TensorFlow (versions 2.4.1), TensorFlow GPU, OpenCV, and Mediapipe for deep learning tasks.
+### Hardware Components
+
+- Microcontroller (Arduino Uno / NodeMCU / ESP32)
+
+- 16×2 LCD display with I2C module
+
+- Metal Sensor
+
+- Water Sensor
+
+- IR Sensor (for detecting waste presence)
+
+- Connecting wires
+
+- Power supply / USB
+
+### Software Requirements
+
+- Arduino IDE
+
+- Embedded C (Arduino C)
+
+- Required libraries (LiquidCrystal_I2C.h)
 
 ## System Architecture
-<!--Embed the system architecture diagram as shown below-->
 
-![Screenshot 2023-11-25 133637](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/a60c11f3-0a11-47fb-ac89-755d5f45c995)
+<img width="1024" height="1024" alt="ChatGPT Image Nov 28, 2025, 06_16_54 PM" src="https://github.com/user-attachments/assets/94ac425d-da0f-4471-b777-82ea99953063" />
 
 
 ## Output
 
-<!--Embed the Output picture at respective places as shown below as shown below-->
-#### Output1 - Name of the output
+### Output 1 – Bin Ready State
 
-![Screenshot 2023-11-25 134037](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/8c2b6b5c-5ed2-4ec4-b18e-5b6625402c16)
+![bin ready image](https://github.com/user-attachments/assets/8df7c7ef-7050-4f69-8686-02e345131dcc)
 
-#### Output2 - Name of the output
-![Screenshot 2023-11-25 134253](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/5e05c981-05ca-4aaa-aea2-d918dcf25cb7)
+#### LCD shows: “Bin Ready”
 
-Detection Accuracy: 96.7%
-Note: These metrics can be customized based on your actual performance evaluations.
+### Output 2 – Waste Detected State
+
+![metal det image](https://github.com/user-attachments/assets/0deb6fba-45a5-4228-8c74-2878d58b2378)
+
+![wet image](https://github.com/user-attachments/assets/b6478c3a-d34c-4fc1-87a9-f70f158cab4f)
+
+![dry det imaage](https://github.com/user-attachments/assets/7aed17f0-1acd-4cf4-a3b2-d96fa34162dd)
+
+
+#### LCD shows:
+
+#### “Metal Waste Detected” or
+
+#### “Wet Waste Detected” or
+
+#### “Dry Waste Detected”
+
+### Output 3 – Close State
+
+![bin closed image](https://github.com/user-attachments/assets/f39a0290-0da6-415e-a265-cee691556518)
+
+
+#### LCD shows: “Bin Closed”
+Servo returns to closed position
+
 
 
 ## Results and Impact
-<!--Give the results and impact as shown below-->
-The Sign Language Detection System enhances accessibility for individuals with hearing and speech impairments, providing a valuable tool for inclusive communication. The project's integration of computer vision and deep learning showcases its potential for intuitive and interactive human-computer interaction.
+This project successfully demonstrates a compact, efficient, and automated waste classification mechanism using basic sensors and embedded programming. Although simple, it eliminates the need for manual segregation and provides clear feedback to users through the LCD interface. The system is especially useful for educational demonstrations, small-scale waste stations, and embedded systems learning platforms.
 
-This project serves as a foundation for future developments in assistive technologies and contributes to creating a more inclusive and accessible digital environment.
+Its low cost, safety, and standalone functionality make it ideal for academic environments. The logic can later be expanded into more advanced models such as motorized multi-bin segregation systems, IoT-enabled smart bins, or machine-learning-based detection.
 
-## Articles published / References
-1. N. S. Gupta, S. K. Rout, S. Barik, R. R. Kalangi, and B. Swampa, “Enhancing Heart Disease Prediction Accuracy Through Hybrid Machine Learning Methods ”, EAI Endorsed Trans IoT, vol. 10, Mar. 2024.
-2. A. A. BIN ZAINUDDIN, “Enhancing IoT Security: A Synergy of Machine Learning, Artificial Intelligence, and Blockchain”, Data Science Insights, vol. 2, no. 1, Feb. 2024.
+## References
+
+1. R. Kumar and T. Fathima, “Automated Waste Segregation using Sensors and Neural Networks,” IEEE ICICCT, 2022.
+
+2. A. Sharma, B. Patel, and C. Verma, “IoT Based Smart Dustbin with Automated Waste Segregation,” IEEE PEEIC, 2023.
+
+3. S. Das and R. Mishra, “Sensor-Based Smart Waste Detection System,” IEEE Conference on Emerging Technologies, 2023.
+
+4. P. Venkatesh and A. Menon, “Embedded Hardware Solutions for Waste Classification,” IEEE SmartTech Journal, 2024.
+
+5. L. M. Joseph and A. Antony, “Enhancing Urban Waste Management Using Intelligent Segregation Systems,” IEEE SmartTech Conference, 2024.
 
 
 
